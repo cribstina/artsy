@@ -1,0 +1,62 @@
+{
+  "plugins": [
+      "unused-imports",
+      "import",
+      "@typescript-eslint"
+  ],
+  "extends": [
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react-hooks/recommended",
+      "next",
+      "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "ignorePatterns": [
+      "dist"
+  ],
+  "settings": {
+      "import/resolver": {
+          "typescript": {}
+      },
+      "import/ignore": [
+          "react-apexcharts"
+      ]
+  },
+  "rules": {
+      "semi": [
+          "error",
+          "never"
+      ],
+      "no-trailing-spaces": [
+          "warn",
+          {
+              "skipBlankLines": true
+          }
+      ],
+      "react-hooks/rules-of-hooks": "warn",
+      "react-hooks/exhaustive-deps": "warn",
+      "unused-imports/no-unused-imports": "warn",
+      "prefer-const": [
+          "warn",
+          {
+              "destructuring": "any",
+              "ignoreReadBeforeAssign": false
+          }
+      ],
+      "no-var": "error",
+      "import/no-unresolved": "error",
+      "@typescript-eslint/consistent-type-imports": "warn",
+      "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+              "argsIgnorePattern": "^_",
+              "varsIgnorePattern": "^_",
+              "caughtErrorsIgnorePattern": "^_"
+          }
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/ban-types": "warn"
+  }
+}
